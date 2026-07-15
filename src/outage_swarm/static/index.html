@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Outage Choreography Swarm</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div>
+      <div class="eyebrow">SERVICE OUTAGE CHOREOGRAPHY SWARM</div>
+      <h1>Mission Control</h1>
+    </div>
+    <div class="health"><span class="pulse"></span><span id="healthText">Control plane starting</span></div>
+  </header>
+
+  <main>
+    <section class="launch card">
+      <div>
+        <h2>Launch a synthetic incident</h2>
+        <p>Each scenario runs mission intake, field deposition, correlation, swarm search, policy evaluation, and communications drafting.</p>
+      </div>
+      <div id="scenarioButtons" class="scenario-buttons"></div>
+    </section>
+
+    <section id="emptyState" class="empty card">
+      <div class="radar">◎</div>
+      <h2>No active mission</h2>
+      <p>Select a scenario to create a normalized incident mission and start the choreography loop.</p>
+    </section>
+
+    <div id="missionView" class="hidden">
+      <section class="mission-header card">
+        <div>
+          <div class="eyebrow" id="missionId"></div>
+          <h2 id="missionTitle"></h2>
+          <div class="meta-row">
+            <span id="severity" class="badge severity"></span>
+            <span id="status" class="badge"></span>
+            <span id="signalCount"></span>
+            <span id="updatedAt"></span>
+          </div>
+        </div>
+        <div class="header-actions">
+          <button id="reanalyzeBtn" class="secondary">Re-run analysis</button>
+          <button id="closeBtn" class="secondary">Close & capture memory</button>
+          <a id="replayLink" class="button-link" target="_blank">Replay JSON</a>
+        </div>
+      </section>
+
+      <section class="metrics-grid">
+        <article class="metric card"><span>Leading confidence</span><strong id="leadConfidence">—</strong></article>
+        <article class="metric card"><span>Blast radius</span><strong id="blastRadius">—</strong></article>
+        <article class="metric card"><span>Recommendations</span><strong id="recommendationCount">—</strong></article>
+        <article class="metric card"><span>Brokered actions</span><strong id="actionCount">—</strong></article>
+      </section>
+
+      <section class="two-col">
+        <article class="card panel">
+          <div class="panel-title"><div><span class="eyebrow">CORRELATION AGENT</span><h3>Ranked hypotheses</h3></div></div>
+          <div id="hypotheses"></div>
+        </article>
+        <article class="card panel">
+          <div class="panel-title"><div><span class="eyebrow">FIELD SUBSTRATE</span><h3>Dependency field</h3></div><span class="legend">size = failure · ring = suspicion</span></div>
+          <svg id="graph" viewBox="0 0 700 390" role="img" aria-label="Incident dependency graph"></svg>
+        </article>
+      </section>
+
+      <section class="card panel">
+        <div class="panel-title"><div><span class="eyebrow">SWARM WORKERS + SENTINEL</span><h3>Mitigation recommendations</h3></div></div>
+        <div id="recommendations" class="recommendations"></div>
+      </section>
+
+      <section class="two-col">
+        <article class="card panel">
+          <div class="panel-title"><div><span class="eyebrow">COMMUNICATIONS AGENT</span><h3>Validated incident drafts</h3></div></div>
+          <label>Internal summary</label><div id="internalSummary" class="copy-block"></div>
+          <label>Status-page draft</label><div id="statusDraft" class="copy-block"></div>
+          <label>Executive update</label><div id="executiveUpdate" class="copy-block"></div>
+        </article>
+        <article class="card panel">
+          <div class="panel-title"><div><span class="eyebrow">AUDIT LEDGER</span><h3>Mission timeline</h3></div></div>
+          <div id="timeline" class="timeline"></div>
+        </article>
+      </section>
+    </div>
+  </main>
+  <div id="toast" class="toast hidden"></div>
+  <script src="/static/app.js"></script>
+</body>
+</html>

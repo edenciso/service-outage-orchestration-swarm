@@ -1,0 +1,15 @@
+{
+  agents: {
+    defaults: {
+      sandbox: { mode: "all", workspaceAccess: "rw" },
+      skills: ["outage-mission-role"]
+    },
+    list: [
+      { id: "conductor", workspace: "./openclaw/workspaces/conductor" },
+      { id: "correlation", workspace: "./openclaw/workspaces/correlation" },
+      { id: "planner", workspace: "./openclaw/workspaces/planner" },
+      { id: "communications", workspace: "./openclaw/workspaces/communications" },
+      { id: "memory", workspace: "./openclaw/workspaces/memory" }
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+services:
+  outage-swarm:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      OUTAGE_SWARM_DB: /app/data/outage_swarm.db
+      OUTAGE_SWARM_DRY_RUN: "true"
+    volumes:
+      - ./data:/app/data

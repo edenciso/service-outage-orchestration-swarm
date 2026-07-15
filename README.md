@@ -1,6 +1,6 @@
 # Service Outage Orchestration Swarm v1.0
 
-A runnable recommendation-first incident-response prototype that detects, correlates, localizes, and mitigates outages spanning internal services and external cloud, CDN, AI, and carrier dependencies.
+A runnable recommendation-first incident-response agent swarm that detects, correlates, localizes, and mitigates outages spanning internal services and external cloud, CDN, AI, and carrier dependencies.
 
 ## What is implemented
 

@@ -108,3 +108,8 @@ The conductor will publish mission packets into the relevant workspace inbox. A 
 - All actions are reversible, scoped, and include a rollback token.
 - Dry-run is the default.
 - The system degrades safely to recommendation-only behavior.
+
+## License
+
+Apache License 2.0 - 2026 Swarmode, LLC. All rights reserved.
+OpenClaw is a trademark of its respective owner; this project is an independent reference architecture and is not affiliated with OpenClaw or OpenAI.

@@ -1,6 +1,6 @@
 # Service Outage Orchestration Swarm v1.0
 
-A runnable recommendation-first incident-response agent swarm that detects, correlates, localizes, and mitigates outages spanning internal services and external cloud, CDN, AI, and carrier dependencies.
+A runnable recommendation-first incident-response agent swarm that detects, correlates, localizes, and mitigates outages spanning internal services and external cloud, CDN, AI, and carrier dependencies. Built on the Hybrid Agentic Swarm Architecture (HAS) v1.
 
 ## What is implemented
 
@@ -23,7 +23,7 @@ A runnable recommendation-first incident-response agent swarm that detects, corr
 
 ## Scope optimization
 
-The PRD's production stack is intentionally collapsed for v1.0. Redis, Postgres, NATS/Kafka, Ray, and OPA would increase setup cost without improving the first validation question: **Can a governed swarm produce credible, explainable, and safely executable outage mitigations faster than a human-only workflow?**
+The production stack is intentionally collapsed for v1.0. Redis, Postgres, NATS/Kafka, Ray, and OPA would increase setup cost without improving the first validation question: **Can a governed swarm produce credible, explainable, and safely executable outage mitigations faster than a human-only workflow?**
 
 Each local component has an explicit replacement boundary, documented in [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md). The product semantics are preserved; distributed scale and third-party control integrations are deferred.
 
